@@ -32,6 +32,11 @@ export function Web3Provider({ children }) {
       });
 
       const browserProvider = new ethers.BrowserProvider(window.ethereum);
+      const network = await browserProvider.getNetwork();
+      if (network.chainId !== 11155111) {
+        throw new Error('Lütfen MetaMask ağını Sepolia olarak ayarlayın.');
+      }
+
       const userSigner = await browserProvider.getSigner();
       const votingContract = new ethers.Contract(
         CONTRACT_ADDRESS,
@@ -63,7 +68,7 @@ export function Web3Provider({ children }) {
       if (err.code === 4001) {
         setError('Cüzdan bağlantısı reddedildi.');
       } else {
-        setError('Cüzdan bağlanırken bir hata oluştu.');
+        setError(err.message || 'Cüzdan bağlanırken bir hata oluştu.');
       }
     } finally {
       setIsConnecting(false);
