@@ -1,7 +1,7 @@
 // Bu dosya deploy script'i tarafından otomatik oluşturulmuştur.
-// Deploy tarihi: 09.04.2026 17:16:50
+// Deploy tarihi: 09.04.2026 18:09:27
 
-export const CONTRACT_ADDRESS = "0xBe024bF423c1871042B8bFde8bd03C74807A01Dc";
+export const CONTRACT_ADDRESS = "0x7390A41Fd2404410b225c029A97c8285E1fDc3e2";
 
 export const CONTRACT_ABI = [
   {
