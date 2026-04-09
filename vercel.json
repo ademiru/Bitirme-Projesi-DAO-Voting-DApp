@@ -8,10 +8,11 @@
   ],
   "routes": [
     {
-      "handle": "filesystem"
+      "src": "/assets/(.*)",
+      "dest": "/client/assets/$1"
     },
     {
-      "src": "/.*",
+      "src": "/(.*)",
       "dest": "/client/index.html"
     }
   ]
