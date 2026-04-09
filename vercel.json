@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "bitirme-projesi-dao-voting-dapp",
   "builds": [
     {
       "src": "client/package.json",
