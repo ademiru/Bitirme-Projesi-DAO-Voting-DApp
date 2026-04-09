@@ -1,16 +1,30 @@
-# React + Vite
+# Client Uygulaması
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bu klasör, DApp’in React tabanlı frontend uygulamasını içerir.
 
-Currently, two official plugins are available:
+## İçerik
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `src/App.jsx`: Ana uygulama bileşeni
+- `src/main.jsx`: Uygulama giriş noktası
+- `src/components`: Arayüz kartları, oylama alanı, yönetici paneli ve yardımcı bileşenler
+- `src/context/Web3Context.jsx`: Web3 bağlantısı ve durum yönetimi
+- `src/utils/contract.js`: Akıllı kontrat adresi ve ABI
+- `vite.config.js`: Vite yapılandırması
 
-## React Compiler
+## Çalıştırma
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+## Build
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run build
+```
+
+## Notlar
+
+- `src/utils/contract.js` dosyasında yerel `Voting` kontrat adresi kullanımda.
+- Canlı bir ağ için bu adresi güncelleyin.
